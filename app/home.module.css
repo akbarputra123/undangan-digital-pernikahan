@@ -1,0 +1,388 @@
+/* =========================================================
+   🎓 GLOBAL SCROLL
+   ========================================================= */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  height: 100%;
+
+  scroll-behavior: smooth;
+
+  background: var(--bg-gradient);
+
+  overflow-y: auto;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================================================
+   SECTION BASE
+   ========================================================= */
+
+.section {
+  width: 100%;
+
+  height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  /* Initial state */
+  opacity: 0;
+
+  transform:
+    translateY(80px)
+    scale(0.92);
+
+  filter: blur(12px);
+
+  transition:
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 1s ease,
+    filter 1s ease;
+}
+
+
+/* =========================================================
+   MUNCUL
+   ========================================================= */
+
+.show {
+  opacity: 1;
+
+  transform:
+    translateY(0)
+    scale(1);
+
+  filter: blur(0);
+}
+
+
+/* =========================================================
+   TRANSISI ANTAR SECTION
+   ========================================================= */
+
+.section:not(.show) {
+  opacity: 0.4;
+
+  transform: scale(0.96);
+}
+
+
+/* =========================================================
+   CARD WRAPPER
+   ========================================================= */
+
+.section > div {
+  width: 390px;
+
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   CHILD ANIMATION SYSTEM
+   ========================================================= */
+
+.animate {
+  opacity: 0;
+
+  transform: translateY(30px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.show .animate {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   DELAY SYSTEM
+   ========================================================= */
+
+.delay1 {
+  transition-delay: 0.2s;
+}
+
+.delay2 {
+  transition-delay: 0.4s;
+}
+
+.delay3 {
+  transition-delay: 0.6s;
+}
+
+.delay4 {
+  transition-delay: 0.8s;
+}
+
+.delay5 {
+  transition-delay: 1s;
+}
+
+
+/* =========================================================
+   ZOOM EFFECT
+   ========================================================= */
+
+.zoom {
+  transform: scale(0.8);
+}
+
+.show .zoom {
+  transform: scale(1);
+}
+
+
+/* =========================================================
+   FLOATING
+   ========================================================= */
+
+.float {
+  animation:
+    floatAnim 4s ease-in-out infinite;
+}
+
+@keyframes floatAnim {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   FADE ORNAMENT
+   ========================================================= */
+
+.fadeIn {
+  opacity: 0;
+
+  animation:
+    fadeInAnim 1.5s ease forwards;
+}
+
+@keyframes fadeInAnim {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.6;
+  }
+}
+
+
+/* =========================================================
+   🎨 SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blue-gradient);
+
+  border-radius: 10px;
+
+  transition:
+    background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-gradient-light);
+}
+
+
+/* =========================================================
+   LAST SECTION SAFE
+   ========================================================= */
+
+.section:last-child {
+  padding-bottom: 120px;
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 768px) {
+  .section > div {
+    transform: scale(0.95);
+  }
+
+  .show > div {
+    transform: scale(1);
+  }
+}
+
+
+/* =========================================================
+   🎵 MUSIC BUTTON
+   ========================================================= */
+
+.musicBtn {
+  position: fixed;
+
+  bottom: 90px;
+
+  right: 20px;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  border: 1px solid var(--border-blue);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: var(--accent-gradient);
+
+  color: var(--blue-deep);
+
+  box-shadow:
+    var(--shadow-blue),
+    0 0 0 2px var(--glass-border);
+
+  cursor: pointer;
+
+  z-index: 1000;
+
+  transition:
+    transform 0.25s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+
+  -webkit-tap-highlight-color: transparent;
+
+  outline: none;
+}
+
+
+/* =========================================================
+   HOVER DESKTOP
+   ========================================================= */
+
+.musicBtn:hover {
+  transform: scale(1.08);
+
+  background: var(--blue-gradient);
+
+  color: var(--text-white);
+
+  box-shadow: var(--shadow-blue-strong);
+}
+
+
+/* =========================================================
+   KLIK / SMOOTH PRESS
+   ========================================================= */
+
+.musicBtn:active {
+  transform: scale(0.9);
+
+  box-shadow: var(--shadow-blue);
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.musicBtn:focus {
+  outline: none;
+}
+
+.musicBtn:focus-visible {
+  outline: 2px solid var(--border-blue);
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   MUSIC ICON
+   ========================================================= */
+
+.musicBtn svg {
+  width: 21px;
+  height: 21px;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .musicBtn {
+    width: 44px;
+    height: 44px;
+
+    right: 16px;
+    bottom: 78px;
+  }
+
+  .musicBtn svg {
+    width: 19px;
+    height: 19px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .musicBtn {
+    width: 42px;
+    height: 42px;
+
+    right: 14px;
+    bottom: 74px;
+  }
+
+  .musicBtn svg {
+    width: 18px;
+    height: 18px;
+  }
+}

@@ -1,0 +1,484 @@
+:root {
+  /* =========================================================
+     🎨 PRIMARY — SOFT BLUE
+     ========================================================= */
+
+  --blue-main: #6b9fc4;
+  --blue-dark: #4f7f9f;
+  --blue-deep: #294b63;
+  --blue-light: #9fc4dc;
+
+  --blue-soft: #eaf3f8;
+
+
+  /* =========================================================
+     ✨ ACCENT — SOFT GOLD / CHAMPAGNE
+     ========================================================= */
+
+  --gold-main: #c7a96b;
+  --gold-dark: #a88b52;
+  --gold-light: #dfca96;
+  --gold-soft: #f5efdf;
+
+
+  /* =========================================================
+     📝 TEXT
+     ========================================================= */
+
+  --text-primary: #294b63;
+  --text-secondary: #5f7482;
+  --text-muted: #8c9da7;
+  --text-white: #ffffff;
+
+  --text-on-blue: #ffffff;
+  --text-on-blue-soft: rgba(255, 255, 255, 0.82);
+
+  --text-gold: #c7a96b;
+
+
+  /* =========================================================
+     🌿 BACKGROUND — LIGHT MODE
+     ========================================================= */
+
+  --bg-primary: #f8fbfd;
+  --bg-secondary: #eef5f9;
+  --bg-white: #ffffff;
+
+  --bg-gradient: radial-gradient(
+    ellipse at center,
+    #ffffff 0%,
+    #f5f9fc 50%,
+    #e3edf3 100%
+  );
+
+  --bg-blue: #4f7f9f;
+  --bg-blue-deep: #294b63;
+  --bg-gold-soft: #f5efdf;
+
+
+  /* =========================================================
+     💙 BLUE GRADIENT
+     ========================================================= */
+
+  --blue-gradient: linear-gradient(
+    135deg,
+    #294b63 0%,
+    #4f7f9f 50%,
+    #6b9fc4 100%
+  );
+
+  --blue-gradient-light: linear-gradient(
+    135deg,
+    #4f7f9f 0%,
+    #6b9fc4 50%,
+    #9fc4dc 100%
+  );
+
+
+  /* =========================================================
+     🥇 GOLD GRADIENT
+     ========================================================= */
+
+  --gold-gradient: linear-gradient(
+    135deg,
+    #a88b52 0%,
+    #c7a96b 50%,
+    #dfca96 100%
+  );
+
+
+  /* =========================================================
+     ✨ BLUE + GOLD GRADIENT
+     ========================================================= */
+
+  --blue-gold-gradient: linear-gradient(
+    135deg,
+    #294b63 0%,
+    #4f7f9f 55%,
+    #c7a96b 100%
+  );
+
+  --gold-blue-gradient: linear-gradient(
+    135deg,
+    #a88b52 0%,
+    #c7a96b 40%,
+    #4f7f9f 100%
+  );
+
+
+  /* =========================================================
+     💎 GLASS EFFECT
+     ========================================================= */
+
+  --glass-bg: rgba(255, 255, 255, 0.82);
+
+  --glass-bg-dark: rgba(41, 75, 99, 0.82);
+
+  --glass-blue: rgba(79, 127, 159, 0.12);
+
+  --glass-gold: rgba(199, 169, 107, 0.16);
+
+  --glass-blur: blur(20px);
+
+  --glass-border: rgba(255, 255, 255, 0.65);
+
+  --glass-border-blue: rgba(79, 127, 159, 0.25);
+
+  --glass-border-gold: rgba(199, 169, 107, 0.45);
+
+
+  /* =========================================================
+     ✨ SHADOW
+     ========================================================= */
+
+  --shadow-soft:
+    0 10px 30px rgba(41, 75, 99, 0.10);
+
+  --shadow-medium:
+    0 15px 35px rgba(41, 75, 99, 0.15);
+
+  --shadow-strong:
+    0 20px 50px rgba(41, 75, 99, 0.24);
+
+  --shadow-gold:
+    0 10px 30px rgba(199, 169, 107, 0.22);
+
+  --shadow-gold-strong:
+    0 12px 35px rgba(199, 169, 107, 0.34);
+
+
+  /* =========================================================
+     🧊 BORDER
+     ========================================================= */
+
+  --border-soft:
+    rgba(41, 75, 99, 0.10);
+
+  --border-medium:
+    rgba(41, 75, 99, 0.18);
+
+  --border-strong:
+    rgba(41, 75, 99, 0.30);
+
+  --border-blue:
+    rgba(79, 127, 159, 0.35);
+
+  --border-gold:
+    rgba(199, 169, 107, 0.55);
+
+  --border-gold-light:
+    rgba(199, 169, 107, 0.30);
+
+
+  /* =========================================================
+     🔤 FONT
+     ========================================================= */
+
+  --font-heading:
+    'Playfair Display',
+    'Georgia',
+    serif;
+
+  --font-body:
+    'Lato',
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+
+  --font-mono:
+    'Fira Code',
+    'Courier New',
+    monospace;
+
+
+  /* =========================================================
+     🔠 FONT SIZE
+     ========================================================= */
+
+  --font-size-base: 16px;
+
+  --font-size-small: 0.875rem;
+  --font-size-body: 1rem;
+  --font-size-large: 1.125rem;
+
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.5rem;
+  --font-size-h4: 1.25rem;
+
+
+  /* =========================================================
+     ⚖️ FONT WEIGHT
+     ========================================================= */
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+
+  /* =========================================================
+     📏 LINE HEIGHT
+     ========================================================= */
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-loose: 1.8;
+
+
+  /* =========================================================
+     🎓 LEGACY COMPATIBILITY
+     ========================================================= */
+
+  --pink-main: var(--blue-main);
+  --pink-dark: var(--blue-dark);
+  --pink-light: var(--blue-light);
+  --pink-soft: var(--blue-soft);
+}
+
+
+/* =============================================================
+   🌙 DARK MODE
+   ============================================================= */
+
+.dark {
+  /* =========================================================
+     🎨 PRIMARY — DARK SOFT BLUE
+     ========================================================= */
+
+  --blue-main: #82b4d4;
+  --blue-dark: #6698b8;
+  --blue-deep: #b4d4e7;
+  --blue-light: #a9cee3;
+
+  --blue-soft: #243744;
+
+
+  /* =========================================================
+     ✨ GOLD
+     ========================================================= */
+
+  --gold-main: #d7b978;
+  --gold-dark: #b99b5f;
+  --gold-light: #ead49d;
+  --gold-soft: #383326;
+
+
+  /* =========================================================
+     📝 TEXT
+     ========================================================= */
+
+  --text-primary: #e8f3f8;
+  --text-secondary: #b6cbd7;
+  --text-muted: #8299a7;
+  --text-white: #ffffff;
+
+  --text-on-blue: #ffffff;
+  --text-on-blue-soft: rgba(255, 255, 255, 0.82);
+
+  --text-gold: #ead49d;
+
+
+  /* =========================================================
+     🌙 BACKGROUND — DARK MODE
+     ========================================================= */
+
+  --bg-primary: #101b22;
+  --bg-secondary: #172832;
+  --bg-white: #1d303b;
+
+  --bg-gradient: radial-gradient(
+    ellipse at center,
+    #243944 0%,
+    #172832 50%,
+    #0e181e 100%
+  );
+
+  --bg-blue: #3d6680;
+  --bg-blue-deep: #162b39;
+
+  --bg-gold-soft: #383326;
+
+
+  /* =========================================================
+     💙 BLUE GRADIENT
+     ========================================================= */
+
+  --blue-gradient: linear-gradient(
+    135deg,
+    #162b39 0%,
+    #294b63 50%,
+    #4f7f9f 100%
+  );
+
+  --blue-gradient-light: linear-gradient(
+    135deg,
+    #3d6680 0%,
+    #6698b8 50%,
+    #82b4d4 100%
+  );
+
+
+  /* =========================================================
+     🥇 GOLD GRADIENT
+     ========================================================= */
+
+  --gold-gradient: linear-gradient(
+    135deg,
+    #9c824e 0%,
+    #c7a96b 50%,
+    #ead49d 100%
+  );
+
+
+  /* =========================================================
+     ✨ BLUE + GOLD
+     ========================================================= */
+
+  --blue-gold-gradient: linear-gradient(
+    135deg,
+    #162b39 0%,
+    #3d6680 55%,
+    #b99b5f 100%
+  );
+
+  --gold-blue-gradient: linear-gradient(
+    135deg,
+    #9c824e 0%,
+    #c7a96b 40%,
+    #3d6680 100%
+  );
+
+
+  /* =========================================================
+     💎 GLASS EFFECT
+     ========================================================= */
+
+  --glass-bg: rgba(29, 48, 59, 0.82);
+
+  --glass-bg-dark: rgba(14, 24, 30, 0.86);
+
+  --glass-blue: rgba(130, 180, 212, 0.12);
+
+  --glass-gold: rgba(215, 185, 120, 0.14);
+
+  --glass-border: rgba(255, 255, 255, 0.10);
+
+  --glass-border-blue: rgba(130, 180, 212, 0.25);
+
+  --glass-border-gold: rgba(215, 185, 120, 0.38);
+
+
+  /* =========================================================
+     ✨ SHADOW
+     ========================================================= */
+
+  --shadow-soft:
+    0 10px 30px rgba(0, 0, 0, 0.22);
+
+  --shadow-medium:
+    0 15px 35px rgba(0, 0, 0, 0.30);
+
+  --shadow-strong:
+    0 20px 50px rgba(0, 0, 0, 0.42);
+
+  --shadow-gold:
+    0 10px 30px rgba(215, 185, 120, 0.12);
+
+  --shadow-gold-strong:
+    0 12px 35px rgba(215, 185, 120, 0.20);
+
+
+  /* =========================================================
+     🧊 BORDER
+     ========================================================= */
+
+  --border-soft:
+    rgba(255, 255, 255, 0.08);
+
+  --border-medium:
+    rgba(255, 255, 255, 0.14);
+
+  --border-strong:
+    rgba(255, 255, 255, 0.22);
+
+  --border-blue:
+    rgba(130, 180, 212, 0.30);
+
+  --border-gold:
+    rgba(215, 185, 120, 0.45);
+
+  --border-gold-light:
+    rgba(215, 185, 120, 0.25);
+
+
+  /* =========================================================
+     🎓 LEGACY COMPATIBILITY
+     ========================================================= */
+
+  --pink-main: var(--blue-main);
+  --pink-dark: var(--blue-dark);
+  --pink-light: var(--blue-light);
+  --pink-soft: var(--blue-soft);
+}
+
+
+/* =============================================================
+   🌐 GLOBAL BODY
+   ============================================================= */
+
+html,
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =============================================================
+   🔗 GLOBAL LINKS
+   ============================================================= */
+
+a {
+  color: var(--blue-main);
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: var(--blue-dark);
+}
+
+
+/* =============================================================
+   🖱️ SELECTION
+   ============================================================= */
+
+::selection {
+  background: var(--blue-main);
+  color: #ffffff;
+}
+
+
+/* =============================================================
+   🧊 SCROLLBAR
+   ============================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blue-main);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-dark);
+}

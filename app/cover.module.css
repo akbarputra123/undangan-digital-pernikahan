@@ -1,0 +1,1703 @@
+/* =========================================================
+   💍 COVER MODULE — WEDDING INVITATION (SOFT BLUE & GOLD)
+   ========================================================= */
+
+
+/* =========================================================
+   📦 WRAPPER
+   ========================================================= */
+
+.app-wrapper {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background: var(--bg-gradient);
+
+  color: var(--text-primary);
+
+  padding: 16px;
+
+  box-sizing: border-box;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================================================
+   📖 HALAMAN UTAMA UNDANGAN
+   ========================================================= */
+
+.cover-page {
+  position: relative;
+
+  width: 100%;
+  max-width: 420px;
+
+  aspect-ratio: 9 / 16;
+
+  border-radius: 32px;
+
+  overflow: hidden;
+
+  box-shadow: var(--shadow-strong);
+
+  background:
+    var(--bg-gradient);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition:
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+
+  /*
+   * Tidak menggunakan transform di sini.
+   *
+   * Transform pada parent dapat membuat
+   * position: fixed milik BottomBar
+   * tidak lagi mengacu langsung ke viewport.
+   */
+}
+
+
+/* =========================================================
+   📸 FOTO LATAR (FOTO PRENIKAHAN / PASANGAN)
+   ========================================================= */
+
+.second-bg {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+
+.bg-photo {
+  object-fit: cover;
+
+  width: 100%;
+  height: 100%;
+
+  filter:
+    brightness(0.80)
+    saturate(1.05);
+
+  transition:
+    filter 0.3s ease;
+}
+
+
+/* =========================================================
+   🔵 SOFT BLUE BOTTOM SHAPE
+   ========================================================= */
+
+.cover-overlay {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 100%;
+
+  height: 68%;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to bottom,
+
+      rgba(41, 75, 99, 0) 0%,
+
+      rgba(41, 75, 99, 0.08) 8%,
+
+      rgba(41, 75, 99, 0.30) 18%,
+
+      rgba(41, 75, 99, 0.62) 32%,
+
+      rgba(41, 75, 99, 0.88) 50%,
+
+      rgba(41, 75, 99, 0.97) 70%,
+
+      var(--bg-blue-deep) 100%
+    );
+
+  clip-path:
+    polygon(
+      0 10%,
+      100% 0,
+      100% 100%,
+      0 100%
+    );
+
+  transition:
+    background 0.3s ease;
+}
+
+
+/* =========================================================
+   ✨ ORNAMEN SUDUT (BUNGA & CINCIN)
+   ========================================================= */
+
+.corner {
+  position: absolute;
+
+  z-index: 3;
+
+  font-size: 1.8rem;
+
+  color: var(--gold-light);
+
+  opacity: 0.5;
+
+  text-shadow:
+    0 2px 12px
+    rgba(199, 169, 107, 0.4);
+
+  pointer-events: none;
+
+  user-select: none;
+  -webkit-user-select: none;
+
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+
+.corner-tl {
+  top: 18px;
+  left: 18px;
+}
+
+
+.corner-tr {
+  top: 18px;
+  right: 18px;
+}
+
+
+.corner-bl {
+  bottom: 18px;
+  left: 18px;
+}
+
+
+.corner-br {
+  bottom: 18px;
+  right: 18px;
+}
+
+
+/* =========================================================
+   ✨ PARTIKEL (BUNGA & KELAP-KELIP)
+   ========================================================= */
+
+.particles {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+.particle {
+  position: absolute;
+
+  color: var(--gold-main);
+
+  font-size: 1.2rem;
+
+  opacity: 0.25;
+
+  animation:
+    float
+    8s
+    infinite
+    alternate
+    ease-in-out;
+
+  user-select: none;
+  -webkit-user-select: none;
+
+  text-shadow:
+    0 0 10px
+    rgba(199, 169, 107, 0.35);
+}
+
+
+/* =========================================================
+   📍 POSISI PARTIKEL
+   ========================================================= */
+
+.p-1 {
+  top: 8%;
+  left: 6%;
+
+  animation-delay: 0s;
+}
+
+
+.p-2 {
+  top: 15%;
+  right: 10%;
+
+  animation-delay: 1s;
+}
+
+
+.p-3 {
+  top: 40%;
+  left: 4%;
+
+  animation-delay: 2s;
+}
+
+
+.p-4 {
+  top: 55%;
+  right: 5%;
+
+  animation-delay: 0.5s;
+}
+
+
+.p-5 {
+  top: 70%;
+  left: 12%;
+
+  animation-delay: 3s;
+}
+
+
+.p-6 {
+  top: 85%;
+  right: 8%;
+
+  animation-delay: 1.5s;
+}
+
+
+.p-7 {
+  top: 25%;
+  left: 25%;
+
+  animation-delay: 2.5s;
+}
+
+
+.p-8 {
+  top: 60%;
+  left: 30%;
+
+  animation-delay: 4s;
+}
+
+
+.p-9 {
+  top: 45%;
+  right: 20%;
+
+  animation-delay: 3.5s;
+}
+
+
+.p-10 {
+  top: 90%;
+  left: 20%;
+
+  animation-delay: 2s;
+}
+
+
+/* =========================================================
+   🌊 ANIMASI PARTIKEL
+   ========================================================= */
+
+@keyframes float {
+  0% {
+    transform:
+      translateY(0)
+      rotate(0deg)
+      scale(1);
+
+    opacity: 0.2;
+  }
+
+  100% {
+    transform:
+      translateY(-20px)
+      rotate(15deg)
+      scale(1.2);
+
+    opacity: 0.6;
+  }
+}
+
+
+/* =========================================================
+   📝 KONTEN UTAMA
+   ========================================================= */
+
+.cover-content {
+  position: relative;
+
+  z-index: 5;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 32px 24px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  color: var(--text-on-blue);
+
+  transition:
+    color 0.3s ease;
+}
+
+
+/* =========================================================
+   🎬 ANIMASI MASUK
+   ========================================================= */
+
+.page-enter .fade-1 {
+  animation:
+    fadeUp
+    0.7s
+    ease
+    both;
+}
+
+
+.page-enter .fade-2 {
+  animation:
+    fadeUp
+    0.7s
+    ease
+    0.15s
+    both;
+}
+
+
+.page-enter .fade-3 {
+  animation:
+    fadeUp
+    0.7s
+    ease
+    0.3s
+    both;
+}
+
+
+.page-enter .fade-4 {
+  animation:
+    fadeUp
+    0.7s
+    ease
+    0.45s
+    both;
+}
+
+
+.page-enter .fade-5 {
+  animation:
+    fadeUp
+    0.7s
+    ease
+    0.6s
+    both;
+}
+
+
+.page-enter .fade-6 {
+  animation:
+    fadeUp
+    0.7s
+    ease
+    0.75s
+    both;
+}
+
+
+.page-enter .anim-slide-up {
+  animation:
+    slideUp
+    0.9s
+    ease
+    0.9s
+    both;
+}
+
+
+.page-enter .anim-fade {
+  animation:
+    fadeIn
+    0.8s
+    ease
+    1s
+    both;
+}
+
+
+.page-enter .anim-bounce {
+  animation:
+    bounceIn
+    1s
+    ease
+    1.2s
+    both;
+}
+
+
+/* =========================================================
+   ⬆️ FADE UP
+   ========================================================= */
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+/* =========================================================
+   ⬆️ SLIDE UP
+   ========================================================= */
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+/* =========================================================
+   ✨ FADE IN
+   ========================================================= */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   🪄 BOUNCE
+   ========================================================= */
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+
+    transform:
+      scale(0.8);
+  }
+
+  60% {
+    opacity: 1;
+
+    transform:
+      scale(1.05);
+  }
+
+  100% {
+    transform:
+      scale(1);
+  }
+}
+
+
+/* =========================================================
+   💍 "THE WEDDING OF"
+   ========================================================= */
+
+.graduate-label {
+  font-family:
+    var(--font-body);
+
+  font-size: 0.75rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.3em;
+
+  text-transform: uppercase;
+
+  color: var(--gold-light);
+
+  opacity: 0.7;
+
+  margin-bottom: 6px;
+
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+/* =========================================================
+   💌 "WE INVITE YOU TO"
+   ========================================================= */
+
+.join-us {
+  font-family:
+    var(--font-body);
+
+  font-size: 0.85rem;
+
+  font-weight: 400;
+
+  letter-spacing: 0.2em;
+
+  color: var(--text-on-blue);
+
+  opacity: 0.8;
+
+  margin-bottom: 2px;
+
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+/* =========================================================
+   💒 "WEDDING"
+   ========================================================= */
+
+.graduation-big {
+  font-family:
+    var(--font-heading);
+
+  font-size: 3.2rem;
+
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  background:
+    var(--gold-gradient);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+
+  margin: 0;
+
+  letter-spacing: 0.04em;
+
+  max-width: 100%;
+
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+/* =========================================================
+   💐 "CEREMONY"
+   ========================================================= */
+
+.party {
+  font-family:
+    var(--font-heading);
+
+  font-size: 1.8rem;
+
+  font-weight: 400;
+
+  font-style: italic;
+
+  color: var(--gold-light);
+
+  margin-top: -6px;
+
+  margin-bottom: 14px;
+
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+/* =========================================================
+   💞 "THE BRIDE & GROOM"
+   ========================================================= */
+
+.honor {
+  font-family:
+    var(--font-body);
+
+  font-size: 0.75rem;
+
+  font-weight: 400;
+
+  letter-spacing: 0.25em;
+
+  text-transform: uppercase;
+
+  color: var(--text-on-blue);
+
+  opacity: 0.7;
+
+  margin-bottom: 4px;
+
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+/* =========================================================
+   👰🤵 NAMA PASANGAN PENGANTIN
+   ========================================================= */
+
+.nama {
+  font-family:
+    var(--font-heading);
+
+  font-size: 1.8rem;
+
+  font-weight: 700;
+
+  color: var(--text-white);
+
+  text-shadow:
+    0 2px 16px
+    rgba(0, 0, 0, 0.3);
+
+  margin:
+    4px 0 2px;
+
+  letter-spacing: 0.02em;
+
+  max-width: 100%;
+
+  overflow-wrap: break-word;
+
+  word-break: break-word;
+
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+/* =========================================================
+   📅 TANGGAL PERNIKAHAN
+   ========================================================= */
+
+.class-of {
+  font-family:
+    var(--font-body);
+
+  font-size: 0.85rem;
+
+  font-weight: 300;
+
+  letter-spacing: 0.15em;
+
+  color: var(--gold-light);
+
+  opacity: 0.9;
+
+  margin-bottom: 8px;
+
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+/* =========================================================
+   ➖ DIVIDER GARIS EMAS
+   ========================================================= */
+
+.divider-line {
+  width: 60px;
+
+  height: 2px;
+
+  background:
+    var(--gold-gradient);
+
+  margin:
+    12px auto;
+
+  border-radius: 4px;
+
+  user-select: none;
+}
+
+
+/* =========================================================
+   💌 "KEPADA YTH."
+   ========================================================= */
+
+.kepada {
+  font-family:
+    var(--font-body);
+
+  font-size: 0.75rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.2em;
+
+  color: var(--gold-light);
+
+  opacity: 0.7;
+
+  margin:
+    6px 0 2px;
+
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+/* =========================================================
+   👥 NAMA TAMU UNDANGAN
+   ========================================================= */
+
+.nama-tamu {
+  font-family:
+    var(--font-heading);
+
+  font-size: 1.4rem;
+
+  font-weight: 600;
+
+  color: var(--text-white);
+
+  text-shadow:
+    0 2px 12px
+    rgba(0, 0, 0, 0.2);
+
+  margin:
+    4px 0 16px;
+
+  padding:
+    0 10px;
+
+  word-break: break-word;
+
+  overflow-wrap: break-word;
+
+  max-width: 100%;
+
+  box-sizing: border-box;
+
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+/* =========================================================
+   💌 TOMBOL BUKA UNDANGAN
+   ========================================================= */
+
+.btn-undangan {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  padding:
+    12px 32px;
+
+  background:
+    var(--gold-gradient);
+
+  color:
+    var(--blue-deep);
+
+  font-family:
+    var(--font-body);
+
+  font-weight: 700;
+
+  font-size: 0.9rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.1em;
+
+  border:
+    1px solid var(--border-gold);
+
+  border-radius: 50px;
+
+  box-shadow:
+    var(--shadow-gold);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  margin:
+    8px 0 20px;
+
+  white-space: nowrap;
+
+  outline: none;
+
+  user-select: none;
+  -webkit-user-select: none;
+
+  -webkit-touch-callout: none;
+
+  -webkit-tap-highlight-color: transparent;
+
+  touch-action: manipulation;
+}
+
+
+/* =========================================================
+   🔹 ICON & TEXT BUTTON
+   ========================================================= */
+
+.btn-undangan span,
+.btn-undangan svg {
+  user-select: none;
+  -webkit-user-select: none;
+
+  -webkit-touch-callout: none;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   🖥️ HOVER
+   ========================================================= */
+
+.btn-undangan:hover {
+  transform:
+    translateY(-3px)
+    scale(1.02);
+
+  box-shadow:
+    var(--shadow-gold-strong);
+}
+
+
+/* =========================================================
+   👆 ACTIVE
+   ========================================================= */
+
+.btn-undangan:active {
+  transform:
+    scale(0.97);
+
+  outline: none;
+}
+
+
+/* =========================================================
+   🎯 FOCUS
+   ========================================================= */
+
+.btn-undangan:focus {
+  outline: none;
+}
+
+
+.btn-undangan:focus-visible {
+  outline: none;
+
+  box-shadow:
+    var(--shadow-gold-strong);
+}
+
+
+/* =========================================================
+   📱 HILANGKAN TAP HIGHLIGHT MOBILE
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+  .btn-undangan,
+  .btn-undangan:active,
+  .btn-undangan:focus,
+  .btn-undangan:focus-visible {
+    -webkit-tap-highlight-color: transparent;
+
+    outline: none;
+  }
+}
+
+
+/* =========================================================
+   📝 FOOTER — INFO ACARA
+   ========================================================= */
+
+.footer-ornamen {
+  font-family:
+    var(--font-body);
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.15em;
+
+  color: var(--gold-light);
+
+  opacity: 0.5;
+
+  margin-top: 4px;
+
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+/* =========================================================
+   📱 RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  /* =======================================================
+     WRAPPER
+     ======================================================= */
+
+  .app-wrapper {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100dvh;
+
+    min-height: 100dvh;
+    max-height: 100dvh;
+
+    margin: 0;
+    padding: 0;
+
+    display: block;
+
+    box-sizing: border-box;
+
+    background:
+      var(--bg-blue-deep);
+
+    overflow: hidden;
+  }
+
+
+  /* =======================================================
+     COVER PAGE
+     ======================================================= */
+
+  .cover-page {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100dvh;
+
+    min-width: 100vw;
+    max-width: 100vw;
+
+    min-height: 100dvh;
+    max-height: 100dvh;
+
+    aspect-ratio: auto;
+
+    margin: 0;
+    padding: 0;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    overflow: hidden;
+
+    /*
+     * Tidak ada transform.
+     */
+
+    transform: none;
+
+    background:
+      var(--bg-gradient);
+
+    background-size: cover;
+
+    background-position: center;
+  }
+
+
+  /* =======================================================
+     📸 FOTO PRENIKAHAN
+     ======================================================= */
+
+  .second-bg {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100dvh;
+
+    overflow: hidden;
+
+    pointer-events: none;
+  }
+
+
+  .bg-photo {
+    object-fit: cover;
+
+    object-position:
+      center top !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    filter:
+      brightness(0.80)
+      saturate(1.05);
+  }
+
+
+  /* =======================================================
+     🔵 SOFT BLUE OVERLAY
+     ======================================================= */
+
+  .cover-overlay {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100vw;
+
+    height: 68%;
+
+    z-index: 1;
+
+    background:
+      linear-gradient(
+        to bottom,
+
+        rgba(41, 75, 99, 0) 0%,
+
+        rgba(41, 75, 99, 0.08) 8%,
+
+        rgba(41, 75, 99, 0.30) 18%,
+
+        rgba(41, 75, 99, 0.62) 32%,
+
+        rgba(41, 75, 99, 0.88) 50%,
+
+        rgba(41, 75, 99, 0.97) 70%,
+
+        var(--bg-blue-deep) 100%
+      );
+
+    clip-path:
+      polygon(
+        0 10%,
+        100% 0,
+        100% 100%,
+        0 100%
+      );
+  }
+
+
+  /* =======================================================
+     ✨ PARTICLES (BUNGA & KELAP-KELIP)
+     ======================================================= */
+
+  .particles {
+    width: 100vw;
+
+    height: 100dvh;
+
+    overflow: hidden;
+
+    pointer-events: none;
+  }
+
+
+  .particle {
+    font-size: 0.9rem;
+  }
+
+
+  .p-7,
+  .p-8,
+  .p-9 {
+    opacity: 0.12;
+  }
+
+
+  /* =======================================================
+     📝 CONTENT
+     ======================================================= */
+
+  .cover-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100vw;
+
+    height: 100dvh;
+
+    min-height: 100dvh;
+    max-height: 100dvh;
+
+    margin: 0;
+
+    padding:
+      24px 0 34px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    text-align: center;
+
+    overflow: visible;
+  }
+
+
+  /* =======================================================
+     💍 THE WEDDING OF
+     ======================================================= */
+
+  .graduate-label {
+    font-size: 0.65rem;
+
+    letter-spacing: 0.25em;
+
+    margin-bottom: 4px;
+  }
+
+
+  /* =======================================================
+     💌 WE INVITE YOU TO
+     ======================================================= */
+
+  .join-us {
+    font-size: 0.68rem;
+
+    letter-spacing: 0.16em;
+
+    margin-bottom: 2px;
+  }
+
+
+  /* =======================================================
+     💒 WEDDING
+     ======================================================= */
+
+  .graduation-big {
+    font-size: 2.6rem;
+
+    line-height: 1;
+
+    letter-spacing: 0.02em;
+
+    max-width: 100%;
+
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+
+  /* =======================================================
+     💐 CEREMONY
+     ======================================================= */
+
+  .party {
+    font-size: 1.5rem;
+
+    margin-top: -4px;
+
+    margin-bottom: 10px;
+  }
+
+
+  /* =======================================================
+     💞 THE BRIDE & GROOM
+     ======================================================= */
+
+  .honor {
+    font-size: 0.65rem;
+
+    letter-spacing: 0.2em;
+
+    margin-bottom: 2px;
+  }
+
+
+  /* =======================================================
+     👰🤵 NAMA PENGANTIN
+     ======================================================= */
+
+  .nama {
+    font-size: 1.5rem;
+
+    line-height: 1.15;
+
+    margin:
+      3px 0 2px;
+
+    max-width: 94%;
+
+    overflow-wrap: break-word;
+
+    word-break: break-word;
+  }
+
+
+  /* =======================================================
+     📅 TANGGAL PERNIKAHAN
+     ======================================================= */
+
+  .class-of {
+    font-size: 0.75rem;
+
+    letter-spacing: 0.12em;
+
+    margin-bottom: 5px;
+  }
+
+
+  /* =======================================================
+     ➖ DIVIDER
+     ======================================================= */
+
+  .divider-line {
+    width: 55px;
+
+    height: 1.5px;
+
+    margin:
+      8px auto;
+  }
+
+
+  /* =======================================================
+     💌 KEPADA
+     ======================================================= */
+
+  .kepada {
+    font-size: 0.65rem;
+
+    letter-spacing: 0.16em;
+
+    margin:
+      4px 0 1px;
+  }
+
+
+  /* =======================================================
+     👥 NAMA TAMU
+     ======================================================= */
+
+  .nama-tamu {
+    font-size: 1.2rem;
+
+    line-height: 1.2;
+
+    margin:
+      3px 0 10px;
+
+    padding:
+      0 8px;
+
+    max-width: 94%;
+
+    overflow-wrap: break-word;
+
+    word-break: break-word;
+  }
+
+
+  /* =======================================================
+     💌 BUTTON BUKA UNDANGAN
+     ======================================================= */
+
+  .btn-undangan {
+    padding:
+      10px 24px;
+
+    font-size: 0.8rem;
+
+    gap: 8px;
+
+    margin:
+      5px 0 12px;
+
+    max-width:
+      calc(100vw - 32px);
+
+    box-sizing: border-box;
+
+    -webkit-tap-highlight-color: transparent;
+
+    outline: none;
+
+    user-select: none;
+    -webkit-user-select: none;
+
+    touch-action: manipulation;
+  }
+
+
+  .btn-undangan:active,
+  .btn-undangan:focus,
+  .btn-undangan:focus-visible {
+    outline: none;
+
+    -webkit-tap-highlight-color: transparent;
+  }
+
+
+  /* =======================================================
+     📝 FOOTER INFO ACARA
+     ======================================================= */
+
+  .footer-ornamen {
+    font-size: 0.6rem;
+
+    letter-spacing: 0.1em;
+
+    margin-top: 2px;
+
+    max-width: 94%;
+  }
+
+
+  /* =======================================================
+     ✨ CORNERS
+     ======================================================= */
+
+  .corner {
+    font-size: 1.2rem;
+  }
+
+
+  .corner-tl {
+    top: 14px;
+    left: 14px;
+  }
+
+
+  .corner-tr {
+    top: 14px;
+    right: 14px;
+  }
+
+
+  .corner-bl {
+    bottom: 14px;
+    left: 14px;
+  }
+
+
+  .corner-br {
+    bottom: 14px;
+    right: 14px;
+  }
+}
+
+
+/* =========================================================
+   📱 MOBILE KECIL
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .cover-content {
+    width: 100vw;
+
+    height: 100dvh;
+
+    padding:
+      18px 0 24px;
+  }
+
+
+  .graduation-big {
+    font-size: 2.3rem;
+  }
+
+
+  .party {
+    font-size: 1.35rem;
+  }
+
+
+  .nama {
+    font-size: 1.3rem;
+  }
+
+
+  .nama-tamu {
+    font-size: 1.05rem;
+  }
+
+
+  .btn-undangan {
+    padding:
+      9px 20px;
+
+    font-size: 0.72rem;
+  }
+
+
+  .footer-ornamen {
+    font-size: 0.55rem;
+  }
+}
+
+
+/* =========================================================
+   📱 MOBILE TINGGI PENDEK
+   ========================================================= */
+
+@media (max-width: 480px) and (max-height: 700px) {
+
+  .cover-content {
+    padding:
+      12px 0 18px;
+  }
+
+
+  .graduate-label {
+    font-size: 0.58rem;
+
+    margin-bottom: 2px;
+  }
+
+
+  .join-us {
+    font-size: 0.62rem;
+  }
+
+
+  .graduation-big {
+    font-size: 2.2rem;
+  }
+
+
+  .party {
+    font-size: 1.25rem;
+
+    margin-bottom: 6px;
+  }
+
+
+  .honor {
+    font-size: 0.58rem;
+  }
+
+
+  .nama {
+    font-size: 1.2rem;
+  }
+
+
+  .class-of {
+    font-size: 0.68rem;
+
+    margin-bottom: 3px;
+  }
+
+
+  .divider-line {
+    margin:
+      5px auto;
+
+    width: 48px;
+  }
+
+
+  .kepada {
+    font-size: 0.58rem;
+  }
+
+
+  .nama-tamu {
+    font-size: 1rem;
+
+    margin-bottom: 7px;
+  }
+
+
+  .btn-undangan {
+    padding:
+      8px 18px;
+
+    font-size: 0.68rem;
+
+    margin-bottom: 7px;
+  }
+
+
+  .footer-ornamen {
+    font-size: 0.52rem;
+  }
+}
+
+
+/* =========================================================
+   💻 DESKTOP
+   ========================================================= */
+
+@media (min-width: 481px) {
+
+  .cover-page {
+    max-width: 420px;
+
+    /*
+     * Tidak ada transform agar BottomBar
+     * yang position: fixed tetap mengacu
+     * kepada viewport.
+     */
+
+    transform: none;
+  }
+
+
+  .cover-overlay {
+    height: 68%;
+  }
+}
+
+
+/* =========================================================
+   🌙 DARK MODE ADJUSTMENT
+   ========================================================= */
+
+.dark .cover-page {
+  box-shadow: var(--shadow-strong);
+}
+
+
+.dark .bg-photo {
+  filter:
+    brightness(0.68)
+    saturate(1.05);
+}
+
+
+.dark .particle {
+  color: var(--gold-light);
+
+  text-shadow:
+    0 0 12px
+    rgba(215, 185, 120, 0.4);
+}
+
+
+/* =========================================================
+   ♿ REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .particle {
+    animation: none;
+  }
+
+  .page-enter .fade-1,
+  .page-enter .fade-2,
+  .page-enter .fade-3,
+  .page-enter .fade-4,
+  .page-enter .fade-5,
+  .page-enter .fade-6,
+  .page-enter .anim-slide-up,
+  .page-enter .anim-fade,
+  .page-enter .anim-bounce {
+    animation: none;
+  }
+
+  .btn-undangan {
+    transition: none;
+  }
+}

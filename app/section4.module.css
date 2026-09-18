@@ -1,0 +1,125 @@
+/* ============================= */
+/* 🎓 CARD */
+/* ============================= */
+
+.card4 {
+  width: 390px;
+  max-width: 100%;
+  height: 100%;
+
+  padding: 30px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  /* =============================
+     BLUE BACKGROUND
+     ============================= */
+
+  background:
+    linear-gradient(
+      rgba(41, 75, 99, 0.94),
+      rgba(79, 127, 159, 0.94)
+    ),
+    url("/bg-floral.png");
+
+  background-size: cover;
+  background-position: center;
+
+  backdrop-filter: var(--glass-blur);
+
+  border-radius: 25px;
+
+  box-shadow: var(--shadow-strong);
+
+  /* GOLD BORDER */
+  border: 1px solid var(--border-gold);
+
+  overflow: hidden;
+}
+
+
+/* ============================= */
+/* 🎓 TITLE */
+/* ============================= */
+
+.script {
+  font-family: var(--font-script, var(--font-heading));
+
+  font-size: 26px;
+
+  /* GOLD */
+  color: var(--gold-light);
+
+  margin-bottom: 20px;
+}
+
+
+/* ============================= */
+/* 🖼️ GRID (FIX 2 KOLOM) */
+/* ============================= */
+
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 10px;
+
+  width: 85%;
+
+  max-width: 280px;
+}
+
+
+/* ============================= */
+/* 🖼️ IMAGE ITEM */
+/* ============================= */
+
+.grid img {
+  width: 100%;
+
+  /* 🔥 portrait konsisten */
+  aspect-ratio: 4 / 5;
+
+  object-fit: cover;
+
+  object-position: center center;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  /*
+   * Ivory border
+   */
+  border: 3px solid rgba(255, 253, 248, 0.9);
+
+  /*
+   * Blue shadow
+   */
+  box-shadow: var(--shadow-soft);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    filter 0.35s ease;
+}
+
+
+/* ============================= */
+/* ✨ HOVER */
+/* ============================= */
+
+.grid img:hover {
+  transform: scale(1.05);
+
+  filter: brightness(1.08);
+
+  box-shadow:
+    0 12px 28px rgba(41, 75, 99, 0.18),
+    0 5px 12px rgba(41, 75, 99, 0.10);
+}
