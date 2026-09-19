@@ -477,7 +477,7 @@ export default function HomePage() {
           <h2
             className={`${s3.eventTitle} ${layout.animate} ${layout.delay4}`}
           >
-            Akad &amp; Resepsi Pernikahan
+            Acara Pernikahan
           </h2>
 
           <div
