@@ -50,7 +50,7 @@ const journeyData = [
     desc: "Dengan niat yang tulus dan doa yang tak pernah putus, kami memutuskan untuk saling mengenal lebih dalam dan menjalin kasih.",
   },
   {
-    date: "Juni 2026",
+    date: "10 Juni 2026",
     title: "Lamaran",
     desc: "Dengan restu kedua keluarga, kami mengikat janji untuk melangkah ke jenjang yang lebih serius menuju ridho Allah SWT.",
   },
