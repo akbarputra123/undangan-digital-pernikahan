@@ -327,7 +327,7 @@ export default function HomePage() {
             <h1
               className={`${s1.nama} ${layout.animate} ${layout.delay3}`}
             >
-              yani &amp; Fall
+              Yani &amp; Fall
             </h1>
 
             <p
