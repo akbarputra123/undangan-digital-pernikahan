@@ -399,7 +399,7 @@ export default function HomePage() {
               Dengan memohon rahmat dan ridho Allah SWT,
               <br />
               kami bermaksud menyelenggarakan
-              resepsi pernikahan putra-putri kami.
+              acara pernikahan putra-putri kami.
               Merupakan suatu kehormatan dan kebahagiaan
               bagi kami apabila Bapak/Ibu/Saudara/i
               berkenan hadir untuk memberikan doa restu.
