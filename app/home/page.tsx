@@ -40,12 +40,12 @@ import BottomBar from "../components/BottomBar";
 
 const journeyData = [
   {
-    date: "3 Februari 2026",
+    date: "3 Februari 2025",
     title: "Pertemuan Awal",
     desc: "Allah mempertemukan kami untuk pertama kalinya. Sebuah awal yang tidak pernah kami duga, namun menjadi pintu bagi kisah indah ini.",
   },
   {
-    date: "14 Februari 2026",
+    date: "14 Februari 2025",
     title: "Menjalin Kasih",
     desc: "Dengan niat yang tulus dan doa yang tak pernah putus, kami memutuskan untuk saling mengenal lebih dalam dan menjalin kasih.",
   },
