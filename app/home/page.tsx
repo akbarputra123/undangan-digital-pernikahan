@@ -340,7 +340,7 @@ export default function HomePage() {
               className={`${s1.tanggal} ${layout.animate} ${layout.delay5}`}
             >
               <CalendarDays size={16} />
-              Rabu, 23 September 2026
+              Minggu, 27 September 2026
             </p>
 
             <a
