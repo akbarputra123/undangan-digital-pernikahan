@@ -111,11 +111,11 @@ function CoverContent() {
 
           {/* NAMA PASANGAN */}
           <h1 className={`${styles.nama} ${mounted ? styles["anim-slide-up"] : ""}`}>
-            Bayani Gusti A, Md, Kep
+           Faldi Kader
             <br />
             &amp;
             <br />
-            Faldi Kader
+             Bayani Gusti A, Md, Kep
           </h1>
 
           {/* TANGGAL PERNIKAHAN */}
