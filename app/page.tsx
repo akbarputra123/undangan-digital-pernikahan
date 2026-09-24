@@ -120,7 +120,7 @@ function CoverContent() {
 
           {/* TANGGAL PERNIKAHAN */}
           <p className={`${styles["class-of"]} ${mounted ? styles["fade-6"] : ""}`}>
-            Rabu, 23 September 2026
+            Minggu, 27 September 2026
           </p>
 
           {/* DIVIDER GARIS EMAS */}

@@ -168,7 +168,7 @@ export default function HomePage() {
   /* ============================= */
 
   useEffect(() => {
-    const target = new Date(2026, 8, 23, 8, 0, 0).getTime();
+      const target = new Date(2026, 8, 27, 14, 0, 0).getTime();
 
     const updateCountdown = () => {
       const diff = target - Date.now();
@@ -486,35 +486,30 @@ export default function HomePage() {
             <div className={s3.detailRow}>
               <CalendarDays size={16} />
               <span className={s3.detailText}>
-                Rabu, 23 September 2026
+                Minggu, 27 September 2026
               </span>
             </div>
 
             <div className={s3.detailRow}>
               <Clock size={16} />
               <span className={s3.detailText}>
-                Ijab Kabul 08:00 WIT
+                Resepsi 20:00 WIT
               </span>
             </div>
+
+            
 
             <div className={s3.detailRow}>
               <Clock size={16} />
               <span className={s3.detailText}>
-                Khatam Qur'an 09:00 WIT — Selesai
-              </span>
-            </div>
-
-            <div className={s3.detailRow}>
-              <Clock size={16} />
-              <span className={s3.detailText}>
-                Saro-saro 15:00 WIT — Selesai
+                Saro-saro 14:00 WIT — Selesai
               </span>
             </div>
 
             <div className={s3.detailRow}>
               <MapPin size={16} />
               <span className={s3.detailText}>
-                Desa Bajo Kep. Botang Lomang, Jl. Jembatan Batu RT 07/RW 02
+                Desa Gandasuli RT.01 Samping Tela Pres Setapak Masuk
               </span>
             </div>
           </div>
