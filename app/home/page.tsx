@@ -515,7 +515,7 @@ export default function HomePage() {
           </div>
 
           <a
-            href="https://maps.app.goo.gl/oPvV8gEyFfHW1YGY9?g_st=aw"
+            href="https://www.google.com/maps?q=-0.6757610440254211,127.4781265258789&z=17&hl=id"
             target="_blank"
             rel="noopener noreferrer"
             className={`${s3.btn} ${layout.animate} ${layout.delay5}`}
