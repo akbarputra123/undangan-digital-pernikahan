@@ -82,7 +82,7 @@ const giftAccounts = [
 
 const giftAddress = {
   alamat:
-    "Desa Bajo, Kepulauan Botang Lomang, Jalan Jembatan Batu RT 07 / RW 02",
+    "Desa Gandasuli RT.01 Samping Tela Pres Setapak Masuk",
   penerima: "Bayani Gusti / Faldi Kader",
 };
 
